@@ -16,32 +16,21 @@
 <div class="menu-category">Menu</div>
 <div class="menu-item"><a href="index.html" id="web-display-link" class="current">Web display</a></div>
 <div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
-<div class="menu-item"><a href="index.html" id="target-page-link" class="current">Target Page</a></div>
 <div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
-<div class="menu-item"><a href="index.html" id="patent-link" class="current">Patent Page</a></div>
 </div>
 
 <div id="layout-content"></div>
 
 <script>
   var homePageLink = document.getElementById("home-page-link");
-  var targetPageLink = document.getElementById("target-page-link");
   var protacDatabaseLink = document.getElementById("protac-database-link");
-  var patentPageLink = document.getElementById("patent-link");
   var imageContainer = document.getElementById("image-container");
-
 
   homePageLink.addEventListener("click", function() {
     imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/2.png" alt="Home Page">';
   });
 
   protacDatabaseLink.addEventListener("click", function() {
-    imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/target.png" alt="Target Page">';
-
-  protacDatabaseLink.addEventListener("click", function() {
     imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/3.png" alt="Protac Database">';
-
-  protacDatabaseLink.addEventListener("click", function() {
-    imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/patent.png" alt="Patent Page">';
   });
 </script>
