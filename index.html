@@ -1,42 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<link rel="shortcut icon" href="newblockLOGO.ico" />
-<link rel="bookmark" href="newblockLOGO.ico" type="image/x-icon"　/>
-<title>MolBlock</title>
-</head>
+  <head>
+    <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+    <link rel="shortcut icon" href="newblockLOGO.ico" />
+    <link rel="bookmark" href="newblockLOGO.ico" type="image/x-icon" 　 />
+    <title>MolBlock</title>
+  </head>
 
-<body>
-  <table summary="Table for page layout." id="tlayout">
-    <tr valign="top">
-      <td id="layout-menu">
-        <div class="menu-category">Menu</div>
-        <div class="menu-item"><a href="index.html" id="web-display-link" class="current">Web display</a></div>
-        <div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
-        <div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
-      </td>
-    </tr>
-  </table>
+  <body>
+    <table summary="Table for page layout." id="tlayout">
+      <tr valign="top">
+        <td id="layout-menu">
+          <div class="menu-category">Menu</div>
+          <div class="menu-item"><a href="#" id="web-display-link" class="current">Web display</a></div>
+          <div class="menu-item"><a href="#" id="home-page-link" class="current">Home Page</a></div>
+          <div class="menu-item">
+            <a href="#" id="protac-database-link" class="current">Protac Database</a>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-  <div id="layout-content"></div>
+    <div id="layout-content"></div>
 
-  <div id="image-container"></div>
+    <div id="image-container"></div>
 
-  <script>
-    var homePageLink = document.getElementById("home-page-link");
-    var protacDatabaseLink = document.getElementById("protac-database-link");
-    var imageContainer = document.getElementById("image-container");
+    <script>
+      var homePageLink = document.getElementById("home-page-link");
+      var protacDatabaseLink = document.getElementById("protac-database-link");
+      var imageContainer = document.getElementById("image-container");
 
-    homePageLink.addEventListener("click", function() {
-      imageContainer.innerHTML = '<img src="https://static.runoob.com/images/demo/demo2.jpg">';
-    });
+      homePageLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/tree/main/2.png">';
+      });
 
-    protacDatabaseLink.addEventListener("click", function() {
-      imageContainer.innerHTML = '<img src="https://static.runoob.com/images/demo/demo2.jpg">';
-    });
-  </script>
-</body>
+      protacDatabaseLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/tree/main/3.png">';
+      });
+    </script>
+  </body>
+</html>
