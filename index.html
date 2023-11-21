@@ -1,46 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-    <link rel="shortcut icon" href="newblockLOGO.ico" />
-    <link rel="bookmark" href="newblockLOGO.ico" type="image/x-icon" 　 />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MolBlock</title>
   </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+    }
+    .wrapper {
+      display: flex;
+    }
+    aside {
+      width: 200px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f6f6f6;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + label {
+      background-color: #f3f3f3;
+      color: #0d489d;
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    label:hover {
+      background-color: #f3f3f3;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
   <body>
-    <table summary="Table for page layout." id="tlayout">
-      <tr valign="top">
-        <td id="layout-menu">
-          <div class="menu-category">Menu</div>
-          <div class="menu-item"><a href="#" id="web-display-link" class="current">Web display</a></div>
-          <div class="menu-item"><a href="#" id="home-page-link" class="current">Home Page</a></div>
-          <div class="menu-item">
-            <a href="#" id="protac-database-link" class="current">Protac Database</a>
-          </div>
-        </td>
-      </tr>
-    </table>
-
-    <div id="layout-content"></div>
-
-    <div id="image-container"></div>
-
-    <script>
-      var homePageLink = document.getElementById("home-page-link");
-      var protacDatabaseLink = document.getElementById("protac-database-link");
-      var imageContainer = document.getElementById("image-container");
-
-      homePageLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/tree/main/2.png">';
-      });
-
-      protacDatabaseLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/tree/main/3.png">';
-      });
-    </script>
+    <div class="wrapper">
+      <aside>
+        <div>
+          <input type="radio" id="web" name="page" value="1" />
+          <label for="web">Web Display</label>
+        </div>
+        <div>
+          <input type="radio" id="home" name="page" value="2" />
+          <label for="home">Home Page</label>
+        </div>
+        <div>
+          <input type="radio" id="protac" name="page" value="3" />
+          <label for="protac">Protac Database</label>
+        </div>
+      </aside>
+      <main>
+        <img src="1.png" alt="alt text" />
+      </main>
+    </div>
   </body>
+  <script>
+    const radios = document.querySelectorAll("input[type=radio]");
+    const main = document.querySelector("main");
+    radios.forEach((radio) => {
+      radio.addEventListener("change", (e) => {
+        const value = e.target.value;
+        main.innerHTML = `<img src="${value}.png" alt="alt text" />`;
+      });
+    });
+
+    radios[0].checked = true;
+  </script>
 </html>
