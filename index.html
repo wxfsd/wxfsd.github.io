@@ -36,11 +36,16 @@
       color: #0d489d;
       font-weight: bold;
     }
-    label {
+    aside label,
+    aside h1 {
       display: block;
       padding: 10px;
       text-align: center;
       cursor: pointer;
+    }
+    aside h1 {
+      font-size: 1.5rem;
+      margin: 0;
     }
     label:hover {
       background-color: #f3f3f3;
@@ -55,45 +60,67 @@
       max-height: 100%;
     }
   </style>
+
   <body>
     <div class="wrapper">
       <aside>
         <div>
           <h1>MolBlock</h1>
         </div>
-        <div>
-          <input type="radio" id="web" name="page" value="1" />
-          <label for="web">Web Display</label>
-        </div>
-        <div>
-          <input type="radio" id="home" name="page" value="2" />
-          <label for="home">Home Page</label>
-        </div>
-        <div>
-          <input type="radio" id="target" name="page" value="target" />
-          <label for="target">Target Page</label>
-        </div>
-        <div>
-          <input type="radio" id="protac" name="page" value="3" />
-          <label for="protac">Protac Database</label>
-        </div>
-        <div>
-          <input type="radio" id="patent" name="page" value="patent" />
-          <label for="patent">Patent Page</label>
-        </div>
       </aside>
       <main>
-        <img src="1.png" alt="alt text" />
+        <img src="./1.png" alt="Web Display" />
       </main>
     </div>
   </body>
   <script>
+    const navItems = [
+      {
+        title: "Web Display",
+        src: "./1.png",
+      },
+      {
+        title: "Home Page",
+        src: "./2.png",
+      },
+      {
+        title: "Target Page",
+        src: "./target.png",
+      },
+      {
+        title: "Protac Database",
+        src: "./3.png",
+      },
+      {
+        title: "Patent Page",
+        src: "./patent.png",
+      },
+    ];
+
+    // create nav items
+    const nav = document.querySelector("aside");
+    navItems.forEach((item) => {
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.id = item.title;
+      input.name = "page";
+      input.title = "page";
+      input.value = item.title;
+      const label = document.createElement("label");
+      label.htmlFor = item.title;
+      label.innerText = item.title;
+      nav.appendChild(input);
+      nav.appendChild(label);
+    });
+
     const radios = document.querySelectorAll("input[type=radio]");
-    const main = document.querySelector("main");
+    const mainImage = document.querySelector("main img");
     radios.forEach((radio) => {
       radio.addEventListener("change", (e) => {
         const value = e.target.value;
-        main.innerHTML = `<img src="${value}.png" alt="alt text" />`;
+        const item = navItems.find((item) => item.title === value);
+        mainImage.src = item.src;
+        mainImage.alt = item.title;
       });
     });
 
