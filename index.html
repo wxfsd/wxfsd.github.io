@@ -17,7 +17,6 @@
         <div class="menu-category">Menu</div>
         <div class="menu-item"><a href="index.html" id="web-display-link" class="current">Web display</a></div>
         <div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
-        <div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
       </td>
     </tr>
   </table>
@@ -28,15 +27,10 @@
 
   <script>
     var homePageLink = document.getElementById("home-page-link");
-    var protacDatabaseLink = document.getElementById("protac-database-link");
     var imageContainer = document.getElementById("image-container");
 
     homePageLink.addEventListener("click", function() {
       imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/blob/main/2.png" alt="Home Page">';
-    });
-
-    protacDatabaseLink.addEventListener("click", function() {
-      imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/blob/main/3.png" alt="Protac Database">';
     });
   </script>
 </body>
