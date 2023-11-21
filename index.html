@@ -18,20 +18,15 @@
 <div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
 <div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
 </div>
-
 <div id="layout-content"></div>
-
 <script>
   var homePageLink = document.getElementById("home-page-link");
   var protacDatabaseLink = document.getElementById("protac-database-link");
   var imageContainer = document.getElementById("image-container");
-
   homePageLink.addEventListener("click", function() {
     imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/2.png" alt="Home Page">';
   });
-
   protacDatabaseLink.addEventListener("click", function() {
     imageContainer.innerHTML = '<img src="https://github.com/wxfsd/wxfsd.github.io/3.png" alt="Protac Database">';
   });
 </script>
-
