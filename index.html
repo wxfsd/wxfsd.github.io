@@ -9,31 +9,34 @@
 <link rel="bookmark" href="newblockLOGO.ico" type="image/x-icon"　/>
 <title>MolBlock</title>
 </head>
+
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-category">Menu</div>
-<div class="menu-item"><a href="index.html" id="web-display-link" class="current">Web display</a></div>
-<div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
-<div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
-</div>
+  <table summary="Table for page layout." id="tlayout">
+    <tr valign="top">
+      <td id="layout-menu">
+        <div class="menu-category">Menu</div>
+        <div class="menu-item"><a href="index.html" id="web-display-link" class="current">Web display</a></div>
+        <div class="menu-item"><a href="index.html" id="home-page-link" class="current">Home Page</a></div>
+        <div class="menu-item"><a href="index.html" id="protac-database-link" class="current">Protac Database</a></div>
+      </td>
+    </tr>
+  </table>
 
-<div id="layout-content"></div>
+  <div id="layout-content"></div>
 
-<div id="image-container"></div>
+  <div id="image-container"></div>
 
-<script>
-  var homePageLink = document.getElementById("home-page-link");
-  var protacDatabaseLink = document.getElementById("protac-database-link");
-  var imageContainer = document.getElementById("image-container");
+  <script>
+    var homePageLink = document.getElementById("home-page-link");
+    var protacDatabaseLink = document.getElementById("protac-database-link");
+    var imageContainer = document.getElementById("image-container");
 
-  homePageLink.addEventListener("click", function() {
-    imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/main/2.png" alt="Home Page">';
-  });
+    homePageLink.addEventListener("click", function() {
+      imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/main/2.png" alt="Home Page">';
+    });
 
-  protacDatabaseLink.addEventListener("click", function() {
-    imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/main/3.png" alt="Protac Database">';
-  });
-</script>
-
+    protacDatabaseLink.addEventListener("click", function() {
+      imageContainer.innerHTML = '<img src="https://raw.githubusercontent.com/wxfsd/wxfsd.github.io/main/3.png" alt="Protac Database">';
+    });
+  </script>
+</body>
